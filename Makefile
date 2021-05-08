@@ -1,1 +1,7 @@
-gcc main.c snake.c food.c painter.c -lcurses -g -o snake
+.c.o:
+	gcc -c $<
+
+snake:main.o snake.o food.o painter.o operate.o
+	gcc -lcurses -o $@ $?
+	mv snake bin/
+	rm -f $?

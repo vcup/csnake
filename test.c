@@ -41,9 +41,9 @@ int main(void) {
 
     /////////////////////////////////////////////
 
-    dish *sara = init_dish(hebi); // <- hebi->tail->x value ???
+    dish *sara = init_dish(hebi);
     add_food(sara);
-    sara->last_food = gen_food(sara->first_food, NULL, x-1, y, 100); // add a food in sara;food in x-1, y
+    sara->last_food = gen_food(sara->first_food, NULL, x-1, y, 100);
     sara->sum++;
     eaten_food(hebi, sara);
     assert(hebi->score == 100);

@@ -45,7 +45,7 @@ int eaten_food(snake *hebi, dish *sara) {
     int fy = sara->first->y;
     food *gohan = sara->first;
     while (!(sx == fx && sy == fy)) {
-        // if next_food is NULL, endcall func
+        // if next_food is last food, endcall func
         if (!(gohan = gohan->next_food))return 0;
         fx = gohan->x % sara->cols;
         fy = gohan->y % sara->rows;

@@ -84,7 +84,7 @@ void del_node(node *node) {
     if (node->prev)
         node->prev->next = node->next;
     else if (node->next)
-        node->next->prev = node->prev; // here??
+        node->next->prev = node->prev;
     free(node);
     return;
 }
